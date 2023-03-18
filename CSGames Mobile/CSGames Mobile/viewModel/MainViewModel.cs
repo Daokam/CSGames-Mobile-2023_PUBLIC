@@ -12,6 +12,15 @@ public partial class MainViewModel : ObservableObject
     [ObservableProperty]
     Temperature temp;
 
+    [ObservableProperty]
+    Air air;
+
+    [ObservableProperty]
+    Water water;
+
+    [ObservableProperty]
+    Power power;
+
     ApiService api;
 
     public MainViewModel(ApiService api)
@@ -27,7 +36,22 @@ public partial class MainViewModel : ObservableObject
         Temp = (await this.api.GetTemperature());
     }
 
+    [RelayCommand]
+    public async void getAir()
+    {
+        Air = (await this.api.GetAirQuality());
+    }
 
+    [RelayCommand]
+    public async void getWater()
+    {
+        Water = (await this.api.GetWaterQuality());     
+    }
 
+    [RelayCommand]
+    public async void getPower()
+    {
+        Power = (await this.api.GetPower());
+    }
 }
 
