@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CSGames_Mobile.MainPage">
+
+    <Grid ColumnDefinitions="1*" RowDefinitions=".25*,.55*, .15*, .25*">
+
+        <Image Grid.Row="1" Source="https://csgames.org/img/atlantis.png"></Image>
+        <ActivityIndicator Margin="0, 20" Grid.Row="2" Scale="1" Color="Brown" IsRunning="true" />
+    </Grid>
+    
+
+</ContentPage>
+

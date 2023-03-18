@@ -57,8 +57,12 @@
 
 	<ItemGroup>
 	  <None Remove="Services\" />
+	  <None Remove="pages\" />
+	  <None Remove="classes\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Services\" />
+	  <Folder Include="pages\" />
+	  <Folder Include="classes\" />
 	</ItemGroup>
 </Project>
