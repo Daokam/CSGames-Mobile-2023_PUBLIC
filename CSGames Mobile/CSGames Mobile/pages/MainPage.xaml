@@ -6,10 +6,19 @@
              x:DataType="viewModel:MainViewModel"
              >
     
-    <Grid ColumnDefinitions=".3*,.3*, .3*" RowDefinitions=".15*,.15*, .15*, .15*, .15*, .15*, .15*">
-        <Label Grid.Row="0" Text="Temperature"></Label>
-        <Label Grid.Column="1" Text="{Binding Temp.Ext_water_temp}" />
-        <Label Grid.Column="2" Text="{Binding Temp.Int_temp}" />
+    <Grid ColumnDefinitions=".3*,.3*, .3*" RowDefinitions=".15*,.15*, .15*, .15*, .15*, .15*, .15*" Padding="10">
+        <Grid Padding="0.5" Grid.ColumnSpan="3">
+            <Frame>
+                <Grid ColumnDefinitions=".3*,.3*, .3*">
+                    <Label Text="Temperature"></Label>
+                    <Label Grid.Column="1"  Text="{Binding Temp.Ext_water_temp}" ></Label>
+                    <Label Grid.Column="2" Text="{Binding Temp.Int_temp}" ></Label>
+                 </Grid>
+
+            </Frame>
+            
+        </Grid>
+        
 
          <Label Grid.Row="1" Text="Qualité de l'air"></Label>
         <Label Grid.Row="1" Grid.Column="1" Text="50"></Label>
