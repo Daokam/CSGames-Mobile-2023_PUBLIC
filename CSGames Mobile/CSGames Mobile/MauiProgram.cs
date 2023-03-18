@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using CSGames_Mobile.Services;
+using Microsoft.Extensions.Logging;
 
 namespace CSGames_Mobile;
 
@@ -15,6 +16,8 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
+		builder.Services.AddSingleton<ApiService>();
+
 #if DEBUG
 		builder.Logging.AddDebug();
 #endif
@@ -22,4 +25,3 @@ public static class MauiProgram
 		return builder.Build();
 	}
 }
-
