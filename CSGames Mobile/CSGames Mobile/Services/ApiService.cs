@@ -25,7 +25,7 @@ namespace CSGames_Mobile.Services;
         
         public async Task<Temperature> GetTemperature()
         {
-            Uri uri = new Uri(string.Format(apiUri + "temp"));
+            Uri uri = new Uri(apiUri + "temp");
             try
             {
                 HttpResponseMessage response = await _client.GetAsync(uri);
@@ -104,7 +104,7 @@ namespace CSGames_Mobile.Services;
                     string content = await response.Content.ReadAsStringAsync();
                     var json = JsonSerializer.Deserialize<JsonElement>(content);
                     var info = json.GetProperty("information");
-                    int power = info.GetProperty("power_levels").GetInt32();
+                    double power = info.GetProperty("power_levels").GetDouble();
                     return new Power(power);
                 }
             }
@@ -182,7 +182,7 @@ namespace CSGames_Mobile.Services;
             return null;
         }
 
-        /*public async Task SendSOS(string name, string location)
+        public async Task SendSOS(string name, string location)
         {
             Uri uri = new Uri(apiUri + "sos");
             try
@@ -211,7 +211,7 @@ namespace CSGames_Mobile.Services;
             {
                 Debug.WriteLine(@"\tERROR {0}", ex.Message);
             }
-        }*/
+        }
 
     }
 

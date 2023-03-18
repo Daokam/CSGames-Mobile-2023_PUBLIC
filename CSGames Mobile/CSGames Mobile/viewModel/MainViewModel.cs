@@ -21,6 +21,12 @@ public partial class MainViewModel : ObservableObject
     [ObservableProperty]
     Power power;
 
+    [ObservableProperty]
+    List<NewsItem> newsItems;
+
+    [ObservableProperty]
+    List<TransitItem> transitItems;
+
     ApiService api;
 
     public MainViewModel(ApiService api)
@@ -56,6 +62,18 @@ public partial class MainViewModel : ObservableObject
     public async void getPower()
     {
         Power = (await this.api.GetPower());
+    }
+
+    [RelayCommand]
+    public async void getNews()
+    {
+        NewsItems = (await this.api.GetNews());
+    }
+
+    [RelayCommand]
+    public async void getTransit()
+    {
+        TransitItems = (await this.api.GetTransit());
     }
 }
 
