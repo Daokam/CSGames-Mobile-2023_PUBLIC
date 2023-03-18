@@ -1,12 +1,15 @@
 ﻿using System;
-namespace CSGames_Mobile.classes;
+namespace CSGames_Mobile
+{
+    public struct News
+    {
+        public int id;
+        public string message;
+        public string title;
+        public int type;
+    }
+}
 
-	public struct News
-	{
-	int id;
-	string message;
-	string title;
-	int type;
-	}
+	
 
 

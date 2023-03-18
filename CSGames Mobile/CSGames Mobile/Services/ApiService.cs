@@ -2,9 +2,9 @@
 using System.Diagnostics;
 using System.Text.Json;
 
-namespace CSGames_Mobile.Services
-{
-	public class ApiService
+namespace CSGames_Mobile.Services;
+
+	public partial class ApiService
 
 	{
         const string apiUri = "http://15.222.250.19/";
@@ -22,6 +22,7 @@ namespace CSGames_Mobile.Services
             };
         }
 
+        
         public async Task<Temperature> GetTemperature()
         {
             Uri uri = new Uri(apiUri + "temp");
@@ -46,5 +47,5 @@ namespace CSGames_Mobile.Services
             return null;
         }
     }
-}
+
 

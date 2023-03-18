@@ -8,8 +8,8 @@
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:LoadingPage}"
-        Route="loadingpage" />
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="mainpage" />
 
 </Shell>
 
