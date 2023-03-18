@@ -6,9 +6,10 @@
              x:DataType="viewModel:MainViewModel"
              >
     
-    <Grid ColumnDefinitions=".5*,.5*" RowDefinitions=".15*,.15*, .15*, .15*, .15*, .15*, .15*">
+    <Grid ColumnDefinitions=".3*,.3*, .3*" RowDefinitions=".15*,.15*, .15*, .15*, .15*, .15*, .15*">
         <Label Grid.Row="0" Text="Temperature"></Label>
-        <Label Grid.Column="1" Text="{Binding Temp}" />
+        <Label Grid.Column="1" Text="{Binding Temp.Ext_water_temp}" />
+        <Label Grid.Column="2" Text="{Binding Temp.Int_temp}" />
 
          <Label Grid.Row="1" Text="Qualité de l'air"></Label>
         <Label Grid.Row="1" Grid.Column="1" Text="50"></Label>

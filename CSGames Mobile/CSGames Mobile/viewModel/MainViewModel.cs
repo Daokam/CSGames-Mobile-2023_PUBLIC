@@ -10,7 +10,7 @@ namespace CSGames_Mobile.viewModel;
 public partial class MainViewModel : ObservableObject
 {
     [ObservableProperty]
-    double temp;
+    Temperature temp;
 
     ApiService api;
 
@@ -24,7 +24,7 @@ public partial class MainViewModel : ObservableObject
     [RelayCommand]
     public async void getTemp()
     {
-        Temp = (await this.api.GetTemperature()).Ext_water_temp;
+        Temp = (await this.api.GetTemperature());
     }
 
 
