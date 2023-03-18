@@ -27,6 +27,10 @@ public partial class MainViewModel : ObservableObject
     {
         this.api = api;
         getTemp();
+        getAir();
+        getWater();
+        getPower();
+
     }
 
 

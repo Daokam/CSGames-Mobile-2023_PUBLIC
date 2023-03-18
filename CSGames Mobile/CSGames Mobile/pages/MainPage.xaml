@@ -6,28 +6,59 @@
              x:DataType="viewModel:MainViewModel"
              >
     
-    <Grid ColumnDefinitions=".3*,.3*, .3*" RowDefinitions=".15*,.15*, .15*, .15*, .15*, .15*, .15*" Padding="10">
+    <Grid ColumnDefinitions=".3*,.3*, .3*" RowDefinitions=".10*,.10*, .10*, .10*, .10*, .10*, .10*" Padding="20" ColumnSpacing="20">
         <Grid Padding="0.5" Grid.ColumnSpan="3">
             <Frame>
-                <Grid ColumnDefinitions=".3*,.3*, .3*">
-                    <Label Text="Temperature"></Label>
-                    <Label Grid.Column="1"  Text="{Binding Temp.Ext_water_temp}" ></Label>
-                    <Label Grid.Column="2" Text="{Binding Temp.Int_temp}" ></Label>
+                <Grid RowDefinitions=".5*, .5*" ColumnDefinitions=".3*,.3*, .3*">
+                    <Label Grid.Column="1" Text="exterieur"></Label>
+                    <Label  Grid.Column="2" Text="interieur"></Label>
+                    <Label Grid.Row="1" Text="Temperature"></Label>
+                    <Label Grid.Row="1" Grid.Column="1"  Text="{Binding Temp.Ext_water_temp}" ></Label>
+                    <Label Grid.Row="1" Grid.Column="2" Text="{Binding Temp.Int_temp}" ></Label>
                  </Grid>
 
             </Frame>
             
         </Grid>
+
+        <Grid Padding="0.5" Grid.Row="1" Grid.ColumnSpan="3">
+            <Frame>
+                <Grid ColumnDefinitions=".3*,.3*, .3*">
+                    <Label Text="Qualité de l'air"></Label>
+                    <Label Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="Center"  Text="{Binding Air.Int_air_quality}" ></Label>
+                    
+                 </Grid>
+
+            </Frame>
+            
+        </Grid>
+
+        <Grid Padding="0.5" Grid.Row="2" Grid.ColumnSpan="3">
+            <Frame>
+                <Grid ColumnDefinitions=".3*,.3*, .3*">
+                    <Label Text="Qualité de l'eau"></Label>
+                    <Label Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="Center"  Text="{Binding Water.Int_water_quality}" ></Label>
+                    
+                 </Grid>
+
+            </Frame>
+            
+        </Grid>
+
+        <Grid Padding="0.5" Grid.Row="3" Grid.ColumnSpan="3">
+            <Frame>
+                <Grid ColumnDefinitions=".3*,.3*, .3*">
+                    <Label Text="Niveau des batteries"></Label>
+                    <Label Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="Center"  Text="{Binding Power.Power_levels}" ></Label>
+                    
+                 </Grid>
+
+            </Frame>
+            
+        </Grid>
+         
+
         
-
-         <Label Grid.Row="1" Text="Qualité de l'air"></Label>
-        <Label Grid.Row="1" Grid.Column="1" Text="50"></Label>
-
-         <Label Grid.Row="2" Text="Qualité de l'eau"></Label>
-        <Label Grid.Row="2" Grid.Column="1" Text="50"></Label>
-
-         <Label Grid.Row="3" Text="Niveau des batteries"></Label>
-        <Label Grid.Row="3" Grid.Column="1" Text="50"></Label>
 
          <Label Grid.Row="4" Text="Nouvelles"></Label>
         <Label Grid.Row="4" Grid.Column="1" Text="50"></Label>
