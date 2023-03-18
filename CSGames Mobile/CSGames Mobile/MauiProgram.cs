@@ -1,5 +1,6 @@
 ﻿using CSGames_Mobile.Services;
 using Microsoft.Extensions.Logging;
+using CSGames_Mobile.viewModel;
 
 namespace CSGames_Mobile;
 
@@ -17,7 +18,8 @@ public static class MauiProgram
 			});
 
 		builder.Services.AddSingleton<ApiService>();
-		builder.Ser
+		builder.Services.AddSingleton<MainViewModel>();
+		builder.Services.AddSingleton<MainPage>();
 
 #if DEBUG
 		builder.Logging.AddDebug();

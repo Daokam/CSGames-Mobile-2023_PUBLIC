@@ -8,7 +8,7 @@
     
     <Grid ColumnDefinitions=".5*,.5*" RowDefinitions=".15*,.15*, .15*, .15*, .15*, .15*, .15*">
         <Label Grid.Row="0" Text="Temperature"></Label>
-        <Label Text="{Binding Temp}" />
+        <Label Grid.Column="1" Text="{Binding Temp}" />
 
          <Label Grid.Row="1" Text="Qualité de l'air"></Label>
         <Label Grid.Row="1" Grid.Column="1" Text="50"></Label>

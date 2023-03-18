@@ -25,7 +25,7 @@ namespace CSGames_Mobile.Services;
         
         public async Task<Temperature> GetTemperature()
         {
-            Uri uri = new Uri(apiUri + "temp");
+            Uri uri = new Uri(string.Format(apiUri + "temp"));
             try
             {
                 HttpResponseMessage response = await _client.GetAsync(uri);
@@ -182,7 +182,7 @@ namespace CSGames_Mobile.Services;
             return null;
         }
 
-        public async Task SendSOS(string name, string location)
+        /*public async Task SendSOS(string name, string location)
         {
             Uri uri = new Uri(apiUri + "sos");
             try
@@ -211,7 +211,7 @@ namespace CSGames_Mobile.Services;
             {
                 Debug.WriteLine(@"\tERROR {0}", ex.Message);
             }
-        }
+        }*/
 
     }
 
