@@ -4,6 +4,7 @@
              x:Class="CSGames_Mobile.MainPage"
              xmlns:viewModel="clr-namespace:CSGames_Mobile.viewModel"
              x:DataType="viewModel:MainViewModel"
+             Shell.NavBarIsVisible="False"
              >
     
     <Grid ColumnDefinitions=".3*,.3*, .3*" RowDefinitions=".10*,.10*, .10*, .10*, .10*, .10*, .10*" Padding="20" ColumnSpacing="20">
@@ -56,15 +57,6 @@
             </Frame>
             
         </Grid>
-         
-
-        
-
-         <Label Grid.Row="4" Text="Nouvelles"></Label>
-        <Label Grid.Row="4" Grid.Column="1" Text="50"></Label>
-
-         <Label Grid.Row="5" Text="Transport en commun"></Label>
-        <Label Grid.Row="5" Grid.Column="1" Text="50"></Label>
 
          <Label Grid.Row="6" Text="SOS"></Label>
         <Label Grid.Row="6" Grid.Column="1" Text="50"></Label>

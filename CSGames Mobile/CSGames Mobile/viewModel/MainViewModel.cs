@@ -27,7 +27,11 @@ public partial class MainViewModel : ObservableObject
     [ObservableProperty]
     List<TransitItem> transitItems;
 
+ 
     ApiService api;
+
+    int newsIndex;
+
 
     public MainViewModel(ApiService api)
     {
@@ -39,6 +43,10 @@ public partial class MainViewModel : ObservableObject
 
     }
 
+    public string gethell()
+    {
+        return "Hello";
+    }
 
     [RelayCommand]
     public async void getTemp()
@@ -55,7 +63,7 @@ public partial class MainViewModel : ObservableObject
     [RelayCommand]
     public async void getWater()
     {
-        Water = (await this.api.GetWaterQuality());     
+        Water = (await this.api.GetWaterQuality());
     }
 
     [RelayCommand]
@@ -70,10 +78,27 @@ public partial class MainViewModel : ObservableObject
         NewsItems = (await this.api.GetNews());
     }
 
+
     [RelayCommand]
     public async void getTransit()
     {
         TransitItems = (await this.api.GetTransit());
+    }
+
+    [RelayCommand]
+    public void nextNews()
+    {
+        newsIndex++;
+    }
+
+    [RelayCommand]
+    public void previousNews()
+    {
+        if(newsIndex!= 0)
+        {
+            newsIndex--;
+        }
+        
     }
 }
 
